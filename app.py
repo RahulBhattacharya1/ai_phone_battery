@@ -7,7 +7,7 @@ st.set_page_config(page_title="Phone Battery Estimator", page_icon="🔋", layou
 st.title("Phone Battery Estimator")
 st.write("Enter key specs to estimate **battery capacity (mAh)**.")
 
-MODEL_PATH = os.path.join("models", "phone_battery_model_small.joblib")
+MODEL_PATH = os.path.join("models", "phone_battery_model.joblib")
 
 @st.cache_resource
 def load_model():
@@ -64,3 +64,4 @@ with st.expander("How this works"):
         The model artifact is compressed so it stays under 25 MB for GitHub uploads.
         """
     )
+
